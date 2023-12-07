@@ -1,0 +1,18 @@
+body {
+    background-image: url('booking3.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+   }
+
+   .custom-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+  }
+
+  .custom-container img {
+    max-width: 100%;
+    height: auto;
+  }
+  

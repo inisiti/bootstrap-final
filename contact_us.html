@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <title>Contact Page</title>
+    <script>
+        function validateForm() {
+
+            let x = document.forms["myForm"]["fname"].value;
+            let email = document.forms["myForm"]["email"].value;
+            let username = document.forms["myForm"]["username"].value;
+            let password = document.forms["myForm"]["password"].value;
+            let gender = document.forms["myForm"]["gender"].value;
+            let religion = document.forms["myForm"]["religion"].value;
+            let address = document.forms["myForm"]["address"].value;
+            let hobbies = document.forms["myForm"]["hobbies"].value;
+
+            if (x == "") {
+                alert("Name must be filled out");
+                return false;
+            } else if (email == "") {
+                alert("email must be filled out");
+                return false;
+            } else if (username == "") {
+                alert("username must be filled out");
+                return false;
+            } else if (password == "") {
+                alert("please add your password");
+                return false;
+            } else if (gender == "") {
+                alert("please choose your gender")
+                return false;
+            } else if (religion == "") {
+                alert("-please choose your religion")
+                return false;
+            } else if (address == "") {
+                alert("address must be filled out")
+                return false;
+            } else if (hobbies == "") {
+                alert("choose one your hobiies")
+                return false;
+            }
+        }
+    </script>
+</head>
+
+</html>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="biodata.html">Biodata</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact_us.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sitiweb.html">Custom Web</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <h2>Contact US</h2>
+    <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+        Name: <input type="text" name="fname"><br><br>
+        Email: <input type="text" name="email"><br><br>
+        Username: <input type="text" name="username"><br><br>
+        Password: <input type="text" name="password"><br><br>
+        Gender: <input type="radio" name="radio" id="gender"> Male
+        <input type="radio" name="radio" id="gender"> Female <br> <br>
+        Religion: <select name="select-box" id="religion">
+            <option value="0">Select Religion</option>
+            <option value="1">Christian</option>
+            <option value="2">Islam</option>
+            <option value="3">Advent</option>
+            <option value="4">Chatolic</option>
+            <option value="5">Hindu</option>
+        </select><br><br>
+        Address: <textarea name="subject" id="address" cols="30" rows="10"></textarea><br><br>
+        Hobbies: <input type="checkbox" name="checkbox" id="hobbies"> Cooking
+        <input type="checkbox" name="checkbox" id="hobbies"> Singing
+        <input type="checkbox" name="checkbox" id="hobbies"> Playing
+        <input type="checkbox" name="checkbox" id="hobbies"> wacthing <br><br>
+        <input type="submit" value="Submit">
+
+    </form><br><br>
+
+    <div class="container-fluid">
+        <div class="row">
+            <footer class="bg-dark text-light text-center py-3">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h5>About Us</h5>
+                            <p>Created By Siti Tambunan</p>
+                        </div>
+                        <div class="col-md-4">
+                            <h5>Contact Us</h5>
+                            <p>Email: 2282036@unai.edu<br>
+                                Phone: +12345678910</p>
+                        </div>
+                        <div class="col-md-4">
+                            <h5>Follow Us</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="#">Facebook</a></li>
+                                <li><a href="#">Twitter</a></li>
+                                <li><a href="#">Instagram</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>
